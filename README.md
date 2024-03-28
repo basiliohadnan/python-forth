@@ -9,7 +9,7 @@
 
   
 
-A Solução A é mais organizada, legível e tem uma maior preocupação na tratativa de erros e aproveitamento das funções inatas do Python, facilitando manutenção e reaproveitamento. Além disso, a solução A tende a ser mais performática, por ser mais eficaz em uso de memória, tempo de execução e escalabilidade, devido à implementação de list comprehensions e generator expressions.
+A Solução A é mais organizada, legível e tem uma maior preocupação na tratativa de erros e aproveitamento das funções inatas do Python, facilitando manutenção e reaproveitamento. Além disso, a solução A tende a ser mais performática, por ser mais eficaz em uso de memória, tempo de execução e escalabilidade, devido à implementação de _list comprehensions_ e _generator expressions_.
 
   
 
@@ -39,18 +39,18 @@ A Solução A é mais organizada, legível e tem uma maior preocupação na trat
 
   
 
-4.  **Tratativa de inserções**: A Solução A faz o parse e processamento de cada linha, separando a lógica para cada operação e avaliando as expressões. Usa list comprehension e generator expressions, melhorando a legibilidade e mantendo o código mais conciso. A Solução B processa tudo em um bloco de loop, o que faz o código ficar verboso e menos legível.
+4.  **Tratativa de inserções**: A Solução A faz o parse e processamento de cada linha, separando a lógica para cada operação e avaliando as expressões. Usa _list comprehension_ e _generator expressions_, melhorando a legibilidade e mantendo o código mais conciso. A Solução B processa tudo em um bloco de loop, o que faz o código ficar verboso e menos legível.
 
   
 
-5.  **Boas práticas**: Dentro da Solução A, vemos maior preocupação em seguir convenções como nomes de variáveis descritivos (PEP-8), aproveitamento de funções internas e uso de estrutura de dados de forma efetiva. A Solução B, embora funcional, carece de organização, legibilidade e capricho na tratativa de erros.
+5.  **Boas práticas**: Dentro da Solução A, vemos maior preocupação em seguir convenções como nomes de variáveis descritivos (_PEP-8_), aproveitamento de funções internas e uso de estrutura de dados de forma efetiva. A Solução B, embora funcional, carece de organização, legibilidade e capricho na tratativa de erros.
 
   
   
 
 ## Testes
 
-Para rodar os testes, digitar comando **pytest**, no terminal.
+Para rodar os testes, digitar comando **_pytest_**, no terminal.
 
   
 
@@ -76,16 +76,16 @@ Testes efetuados manualmente:
 
 5.  **Teste de erro de pilha vazia**: Ambas as soluções retornam corretamente um erro quando há uma operação em uma pilha vazia.
 
-6.  **Teste de dup**: Ambas as soluções retornam corretamente após a execução do comando "dup".
+6.  **Teste de _dup_**: Ambas as soluções retornam corretamente uma lista com o último item duplicado, após a execução do comando "_dup_".
 
   
 
-7.  **Teste de drop**: Ambas as soluções retornam corretamente após a execução do comando "drop".
+7.  **Teste de _drop_**: Ambas as soluções retornam corretamente uma lista com o último item removido, após a execução do comando "_drop_".
 
   
 
-8.  **Teste de swap**: Ambas as soluções retornam corretamente após a execução do comando "swap".
+8.  **Teste de _swap_**: Ambas as soluções retornam corretamente uma lista com o último item trocado de índice com o penúltimo item, após a execução do comando "_swap_".
 
   
 
-9.  **Teste de over**: Ambas as soluções retornam corretamente após a execução do comando "over".
+9.  **Teste de _over_**: Ambas as soluções retornam corretamente uma lista com item[2] duplicado e posicionado no final, após a execução do comando "_over_".
