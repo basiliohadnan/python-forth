@@ -39,7 +39,7 @@ A Solução A é mais organizada, legível e tem uma maior preocupação na trat
 
   
 
-4.  **Tratativa de inserções**: A Solução A faz o parse e processamento de cada linha, separando a lógica para cada operação e avaliando as expressões. Usa _list comprehension_ e _generator expressions_, melhorando a legibilidade e mantendo o código mais conciso. A Solução B processa tudo em um bloco de loop, o que faz o código ficar verboso e menos legível.
+4.  **Tratativa de inserções**: A Solução A faz o _parse_ e processamento de cada linha, separando a lógica para cada operação e avaliando as expressões. Usa _list comprehension_ e _generator expressions_, melhorando a legibilidade e mantendo o código mais conciso. A Solução B processa tudo em um bloco de loop, o que faz o código ficar verboso e menos legível.
 
   
 
@@ -88,4 +88,4 @@ Testes efetuados manualmente:
 
   
 
-9.  **Teste de _over_**: Ambas as soluções retornam corretamente uma lista com segundo item duplicado e posicionado no final, após a execução do comando "_over_".
+9.  **Teste de _over_**: Ambas as soluções retornam corretamente uma lista com o segundo item duplicado e posicionado no final, após a execução do comando "_over_".
