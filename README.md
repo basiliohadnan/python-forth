@@ -88,4 +88,4 @@ Testes efetuados manualmente:
 
   
 
-9.  **Teste de _over_**: Ambas as soluções retornam corretamente uma lista com item[2] duplicado e posicionado no final, após a execução do comando "_over_".
+9.  **Teste de _over_**: Ambas as soluções retornam corretamente uma lista com segundo item duplicado e posicionado no final, após a execução do comando "_over_".
