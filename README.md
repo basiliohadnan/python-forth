@@ -1,9 +1,6 @@
+# [Solução A](https://exercism.org/tracks/python/exercises/forth/solutions/tugrul) - tugrul's solution
 
-# [Solução A](#https://exercism.org/tracks/python/exercises/forth/solutions/tugrul): tugrul's solution
-
-# [Solução B](#https://exercism.org/tracks/python/exercises/forth/solutions/pythonSnake): pythonSnake's solution
-
-  
+# [Solução B](https://exercism.org/tracks/python/exercises/forth/solutions/pythonSnake) - pythonSnake's solution
 
 ## Resumo da comparação
 
@@ -50,7 +47,9 @@ A Solução A é mais organizada, legível e tem uma maior preocupação na trat
 
 ## Testes
 
-Para rodar os testes, digitar comando **_pytest_**, no terminal.
+Para rodar os testes:
+1. Executar comando **_pip install pytest**_
+2. Executar comando **_pytest_**
 
   
 
