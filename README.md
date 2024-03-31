@@ -47,9 +47,9 @@ A Solução A é mais organizada, legível e tem uma maior preocupação na trat
 
 ## Testes
 
-Para rodar os testes:
-1. Executar comando **_pip install pytest_**
-2. Executar comando **_pytest_**
+Para rodar os testes, executar comandos:
+1. **_pip install pytest_**
+2. **_pytest_**
 
   
 
