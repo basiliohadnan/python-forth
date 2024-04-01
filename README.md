@@ -17,7 +17,8 @@
 A solução A é mais organizada, legível, tem maior preocupação na tratativa de erros e uso das funções inatas do Python, o que facilita na manutenção e reaproveitamento de código. 
 Além disso, a solução A tende a ser mais performática, por ser mais eficaz em uso de memória, tempo de execução e escalabilidade, devido à implementação de _list comprehensions_ e _generator expressions_.
 
-**Observação**: Embora a tendência fosse de que a solução A tivesse um desempenho melhor em termos de performance, após rodar o teste comparativo, a solução B se mostrou mais rápida. Minha sugestão de alteração do script ficou em segundo lugar, e a solução A teve a execução mais lenta.
+**Observação**: Embora a tendência fosse de que a solução A tivesse um desempenho melhor em termos de performance, após rodar o teste comparativo, a solução B se mostrou mais rápida. 
+Minha sugestão de alteração do script ficou em segundo lugar e a solução A teve a execução mais lenta.
 
 | Script| Average Execution Time (seconds) |
 |-------------|----------------------------------|
