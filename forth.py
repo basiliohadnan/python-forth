@@ -1,5 +1,4 @@
 import inspect, re
-from itertools import chain
 
 OPS = {
     '+':    lambda x, y: [y + x],
@@ -35,8 +34,17 @@ def apply(stack, elem):
     else:
         raise ValueError('undefined operation')
 
+#used list comprehension instead of 
+#generator expression inside chain and
+#avoided multiple dictionary lookups. 
 def substitute(custom, elems):
-    return list(chain(*(custom[x] if x in custom else [x] for x in elems)))
+    result = []
+    for x in elems:
+        if x in custom:
+            result.extend(custom[x])
+        else:
+            result.append(x)
+    return result
 
 def evaluate(input_data):
     stack = []
