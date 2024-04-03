@@ -34,15 +34,12 @@ Minha sugestão de alteração do script ficou em segundo lugar e a solução A 
 
   
 
-| Script| Average Execution Time (seconds) |
 
+| Script      | Average Execution Time (seconds) |
 |-------------|----------------------------------|
-
-| solution_a | 0.0145 |
-
-| solution_b | 0.0 |
-
-| forth | 0.0008 |
+| solution_a  | 0.0145                           |
+| solution_b  | 0.0                              |
+| forth       | 0.0008                           |
 
   
 
