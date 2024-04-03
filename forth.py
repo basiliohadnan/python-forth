@@ -26,17 +26,18 @@ def apply(stack, element):
         stack.append(int(element))
     elif element in operations:
         operation = operations[element]
-        count = len(inspect.signature(operation).parameters)
-        if len(stack) < count:
+        parameters_count = len(inspect.signature(operation).parameters)
+        if len(stack) < parameters_count:
             #removed unnecessary print
             raise StackUnderflowError
-        stack.extend(operation(*(stack.pop() for x in range(count))))
+        stack.extend(operation(*(stack.pop() for x in range(parameters_count))))
     else:
         raise ValueError('undefined operation')
 
 
 def substitute(custom_operations, elements):
 #used list comprehension instead of generator expression inside chain 
+#(removed chain, as well)
 #then avoided multiple dictionary lookups. 
     result = []
     for x in elements:
