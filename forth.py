@@ -1,6 +1,6 @@
 import inspect, re
 
-OPS = {
+operations = {
     '+':    lambda x, y: [y + x],
     '-':    lambda x, y: [y - x],
     '*':    lambda x, y: [y * x],
@@ -18,50 +18,50 @@ class StackUnderflowError(Exception):
 #removed DivisionByZero's custom exception.
         
 def is_number(elem):
-#preferred to use regex
+#preferred to use regex | accepts integer or float
     return bool(re.match(r'^-?\d+(\.\d+)?$', elem))
 
-def apply(stack, elem):
-    if is_number(elem):
-        stack.append(int(elem))
-    elif elem in OPS:
-        op = OPS[elem]
-        count = len(inspect.signature(op).parameters)
+def apply(stack, element):
+    if is_number(element):
+        stack.append(int(element))
+    elif element in operations:
+        operation = operations[element]
+        count = len(inspect.signature(operation).parameters)
         if len(stack) < count:
             #removed unnecessary print
             raise StackUnderflowError
-        stack.extend(op(*(stack.pop() for x in range(count))))
+        stack.extend(operation(*(stack.pop() for x in range(count))))
     else:
         raise ValueError('undefined operation')
 
 #used list comprehension instead of 
 #generator expression inside chain and
 #avoided multiple dictionary lookups. 
-def substitute(custom, elems):
+def substitute(custom_operations, elements):
     result = []
-    for x in elems:
-        if x in custom:
-            result.extend(custom[x])
+    for x in elements:
+        if x in custom_operations:
+            result.extend(custom_operations[x])
         else:
             result.append(x)
     return result
 
 def evaluate(input_data):
     stack = []
-    custom = {}
+    custom_operations = {}
     try:
         for line in input_data:
-            elems = line.lower().split()
-            if elems[0] == ':':
-                assert elems[-1] == ';'
-                op = elems[1]
+            elements = line.lower().split()
+            if elements[0] == ':':
+                assert elements[-1] == ';'
+                op = elements[1]
                 if is_number(op):
                     raise ValueError('illegal operation')
-                custom[op] = substitute(custom, elems[2:-1])
+                custom_operations[op] = substitute(custom_operations, elements[2:-1])
             else:
-                elems = substitute(custom, elems)
-                for elem in elems:
-                    apply(stack, elem)
+                elements = substitute(custom_operations, elements)
+                for element in elements:
+                    apply(stack, element)
         return stack
     except ZeroDivisionError:
         raise ZeroDivisionError('divide by zero') 
