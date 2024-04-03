@@ -14,11 +14,8 @@ operations = {
 class StackUnderflowError(Exception):
     def __init__(self):
         super().__init__('Insufficient number of items in stack')
-        
-#removed DivisionByZero's custom exception.
-        
+
 def is_number(elem):
-#preferred to use regex | accepts integer or float
     return bool(re.match(r'^-?\d+(\.\d+)?$', elem))
 
 def apply(stack, element):
@@ -28,17 +25,12 @@ def apply(stack, element):
         operation = operations[element]
         parameters_count = len(inspect.signature(operation).parameters)
         if len(stack) < parameters_count:
-            #removed unnecessary print
             raise StackUnderflowError
         stack.extend(operation(*(stack.pop() for x in range(parameters_count))))
     else:
         raise ValueError('undefined operation')
 
-
 def substitute(custom_operations, elements):
-#used list comprehension instead of generator expression inside chain 
-#(removed chain, as well)
-#then avoided multiple dictionary lookups. 
     result = []
     for element in elements:
         if element in custom_operations:
@@ -65,4 +57,4 @@ def evaluate(input):
                     apply(stack, element)
         return stack
     except ZeroDivisionError:
-        raise ZeroDivisionError('divide by zero') 
+        raise ZeroDivisionError('divide by zero')
