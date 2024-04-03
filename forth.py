@@ -40,11 +40,11 @@ def substitute(custom_operations, elements):
 #(removed chain, as well)
 #then avoided multiple dictionary lookups. 
     result = []
-    for x in elements:
-        if x in custom_operations:
-            result.extend(custom_operations[x])
+    for element in elements:
+        if element in custom_operations:
+            result.extend(custom_operations[element])
         else:
-            result.append(x)
+            result.append(element)
     return result
 
 def evaluate(input_data):
