@@ -34,10 +34,10 @@ def apply(stack, element):
     else:
         raise ValueError('undefined operation')
 
-#used list comprehension instead of 
-#generator expression inside chain and
-#avoided multiple dictionary lookups. 
+
 def substitute(custom_operations, elements):
+#used list comprehension instead of generator expression inside chain 
+#then avoided multiple dictionary lookups. 
     result = []
     for x in elements:
         if x in custom_operations:
