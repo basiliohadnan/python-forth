@@ -47,18 +47,18 @@ def substitute(custom_operations, elements):
             result.append(element)
     return result
 
-def evaluate(input_data):
+def evaluate(input):
     stack = []
     custom_operations = {}
     try:
-        for line in input_data:
+        for line in input:
             elements = line.lower().split()
             if elements[0] == ':':
                 assert elements[-1] == ';'
-                op = elements[1]
-                if is_number(op):
+                operation = elements[1]
+                if is_number(operation):
                     raise ValueError('illegal operation')
-                custom_operations[op] = substitute(custom_operations, elements[2:-1])
+                custom_operations[operation] = substitute(custom_operations, elements[2:-1])
             else:
                 elements = substitute(custom_operations, elements)
                 for element in elements:
